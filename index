@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História Interativa</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hidden { display: none; }
+        .question { margin: 20px; }
+    </style>
+</head>
+<body>
+    <div id="question1" class="question">
+        <p>Você está em uma floresta misteriosa. O que você faz?</p>
+        <button onclick="showQuestion('question2')">Explorar</button>
+        <button onclick="showQuestion('question3')">Voltar para casa</button>
+    </div>
+
+    <div id="question2" class="question hidden">
+        <p>Você encontra uma estrada secreta. O que você faz?</p>
+        <button onclick="showQuestion('question4')">Seguir a estrada</button>
+        <button onclick="showQuestion('question5')">Voltar para a floresta</button>
+    </div>
+
+    <div id="question3" class="question hidden">
+        <p>Você chega em casa e encontra algo inesperado. O que fazer?</p>
+        <button onclick="showQuestion('question6')">Investigar</button>
+        <button onclick="showQuestion('question7')">Ignorar</button>
+    </div>
+
+    <div id="question4" class="question hidden">
+        <p>Você encontra um tesouro! O que você faz?</p>
+        <button onclick="showQuestion('question8')">Abrir</button>
+        <button onclick="showQuestion('question9')">Guardar</button>
+    </div>
+
+    <div id="question5" class="question hidden">
+        <p>Você volta para a floresta e encontra um novo caminho. O que fazer?</p>
+        <button onclick="showQuestion('question2')">Explorar o novo caminho</button>
+        <button onclick="showQuestion('question1')">Voltar para a entrada da floresta</button>
+    </div>
+
+    <div id="question6" class="question hidden">
+        <p>Você resolve investigar e descobre algo incrível. O que fazer agora?</p>
+        <button onclick="showQuestion('question10')">Compartilhar</button>
+        <button onclick="showQuestion('question11')">Manter segredo</button>
+    </div>
+
+    <div id="question7" class="question hidden">
+        <p>Você ignora e tudo continua normal. O que fazer a seguir?</p>
+        <button onclick="showQuestion('question12')">Relaxar</button>
+        <button onclick="showQuestion('question13')">Procurar aventuras</button>
+    </div>
+
+    <div id="question8" class="question hidden">
+        <p>O tesouro contém um mapa! O que fazer?</p>
+        <button onclick="showQuestion('question14')">Seguir o mapa</button>
+        <button onclick="showQuestion('question15')">Guardar o mapa</button>
+    </div>
+
+    <div id="question9" class="question hidden">
+        <p>Você guarda o tesouro e vai embora. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question10" class="question hidden">
+        <p>Você compartilha e todos ficam impressionados. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question11" class="question hidden">
+        <p>Você mantém segredo e a vida continua. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question12" class="question hidden">
+        <p>Você relaxa e aproveita o momento. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question13" class="question hidden">
+        <p>Você procura aventuras e encontra novas oportunidades. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question14" class="question hidden">
+        <p>Você segue o mapa e encontra um novo tesouro. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <div id="question15" class="question hidden">
+        <p>Você guarda o mapa e continua sua vida normal. A história termina aqui.</p>
+        <button onclick="showQuestion('question1')">Começar de novo</button>
+    </div>
+
+    <script>
+        function showQuestion(id) {
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
